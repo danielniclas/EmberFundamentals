@@ -7,7 +7,7 @@ Blogger.PostRoute = Ember.Route.extend({
 
     model: function(params) {
 
-        return posts.findBy('id', params.post_id);          //  finBy() METHOD is EMBER unique
+        return posts.findBy('id', params.post_id);          //  findBy() METHOD is EMBER unique
                                                             //  Pass 'id' to look at the id PROPERTY of all elements in the post ARRAY
                                                             //  Will look for:  params.post.id
                                                             //  params.post.id will return:  3

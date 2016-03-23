@@ -5,14 +5,15 @@
 
 // Page Router:
 
-Blogger.Router.map(function() {
+Blogger.Router.map(function() {              //  Set routes inside this function
 
-                                             //  {path:   }  MAPPING for the ROUTE
+                                             //  By default the path to a page is the same as the name of the entry in the router
+                                             //  {path:   }  MAPPING for the ROUTE <<  provide path explicitly
 
     this.resource('posts', {path: '/'});     // to make this the home page -->  LOADS Template, Controller and Model
-    this.resource('about');
-    this.resource('contact', function() {   //  NESTED ROUTE
-        this.resource('phone');
+    this.resource('about');                  //  /about path (from URL) >>  loads the about ROUTE
+    this.resource('contact', function() {    //  NESTED ROUTE
+        this.resource('phone');              //  Anywhere you add an {{outlet}} helper >> a nested route will get rendered into that spot
         this.resource('email');
     });
     this.resource('recent-comments');

@@ -1,3 +1,5 @@
+
+
 var EmberHandlebarsLoader = {
   loadTemplates: function(templateNames) {
     templateNames.forEach(function(name) {
